@@ -72,6 +72,7 @@ print(f'''\n===============Labeled data===============\n
 plt.plot(x,y, 'r')
 plt.scatter(x_point_class_0, y_point_class_0)
 plt.scatter(x_point_class_1, y_point_class_1)
+plt.title("Linear classification.")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.legend(["y=-1.5x+0.2", "Label - 0", "Label - 1"], loc=4)
@@ -80,7 +81,7 @@ plt.show()
 
 
 
-# Creates file labeled_data.csv where with classificated data.
+# Creates file labeled_data.csv with classificated data.
 with open ("./Labs and Exams/Labb_03/labelled_data.csv", "w") as f_write:
     f_write.write("===============Labeled data===============\n")
     f_write.write(f"\nPoints with class 0 - {len(points_class_0)}.\n")
