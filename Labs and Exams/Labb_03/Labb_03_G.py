@@ -14,12 +14,14 @@ def convert_to_float (input_list):          # function for convert to float.
 
 def points_classification(k,m, points):         # function for point classification.
     points_class = []
-    for i in points:
-        if i[1] > k*i[0]+m:
-            i.append(1)
+    for l in points:
+        if l[1] > k*l[0]+m:
+            l=l.copy()
+            l.append(1)
         else:
-            i.append(0)
-        points_class.append(i)
+            l=l.copy()
+            l.append(0)
+        points_class.append(l)
     return points_class
 
 
@@ -77,8 +79,6 @@ plt.xlabel("x")
 plt.ylabel("y")
 plt.legend(["y=-1.5x+0.2", "Label - 0", "Label - 1"], loc=4)
 plt.show()
-
-
 
 
 # Creates file labeled_data.csv with classificated data.
