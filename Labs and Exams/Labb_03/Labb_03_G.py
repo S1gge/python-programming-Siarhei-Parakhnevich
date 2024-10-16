@@ -57,7 +57,7 @@ x_point_class_1 = [element[0] for element in points_class_1]
 y_point_class_1 = [element[1] for element in points_class_1]
 
 #Output information.
-print(f'''\n===============Labeled data===============\n
+print(f'''\n============== Labeled data ==============\n
       Points with class 0 - {len(points_class_0)}.\n
       Points with class 1 - {len(points_class_1)}.\n\n''')
 
@@ -73,7 +73,7 @@ plt.show()
 
 # Creates file labeled_data.csv with classificated data.
 with open ("./Labs and Exams/Labb_03/labelled_data.csv", "w") as f_write:
-    f_write.write("===============Labeled data===============\n")
+    f_write.write("============== Labeled data ==============\n")
     f_write.write(f"\nPoints with class 0 - {len(points_class_0)}.\n")
     f_write.write(f"Points with class 1 - {len(points_class_1)}.\n\n")
     for element in points_class:
