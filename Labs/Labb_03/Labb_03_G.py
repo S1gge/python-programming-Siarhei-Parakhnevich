@@ -32,7 +32,7 @@ def x_and_y_class(points_class):
 
 
 def save_data(points_class, points_class_0, points_class_1):
-    with open ("./Labs/Labb_03/labelled_data.csv", "w") as f_write:
+    with open ("./Labs/Labb_03/labelled_data.csv", "w", newline='') as f_write:
         f_write.write("============== Labeled data ==============\n")
         f_write.write(f"\nPoints with class 0 - {len(points_class_0)}.\n")
         f_write.write(f"Points with class 1 - {len(points_class_1)}.\n\n")
