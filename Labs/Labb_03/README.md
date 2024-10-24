@@ -6,4 +6,4 @@
 ### En linjär funktion skapas genom att värderna för "x", "k" och "m" anges.
 ### Efteråt classifieras data med avsende på den linjära funktionen och resulatatet förbereds för plottning.
 
-### I slutet visas en graf över förhållandet mellan de tvåklasserna, samt skapas en fil med en lista över klasade datan och derras numeriska kvantitet.
+### I slutet visas en graf över förhållandet mellan de två klasserna, samt skapas en fil med en lista över klasade datan och derras numeriska kvantitet.
