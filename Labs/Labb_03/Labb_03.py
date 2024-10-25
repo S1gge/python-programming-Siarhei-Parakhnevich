@@ -21,8 +21,8 @@ def points_classification(k,m, data=get_data()):         # function for point cl
         points_class.append(l)
     return points_class
 
-def x_and_y_class(points_class):
-    points_class_0, points_class_1 = [], []                             # classification lists creates.
+def x_and_y_class(points_class):                            # function for label creation.
+    points_class_0, points_class_1 = [], []                             
     for element in points_class:
         if element[2] == 0:
             points_class_0.append(element)
@@ -31,7 +31,7 @@ def x_and_y_class(points_class):
     return points_class_0, points_class_1
 
 
-def save_data(points_class, points_class_0, points_class_1):
+def save_data(points_class, points_class_0, points_class_1):            # function for data saving.
     with open ("./Labs/Labb_03/labelled_data.csv", "w", newline='') as f_write:
         f_write.write("============== Labeled data ==============\n")
         f_write.write(f"\nPoints with class 0 - {len(points_class_0)}.\n")
@@ -40,7 +40,7 @@ def save_data(points_class, points_class_0, points_class_1):
         write = csv.writer(f_write)
         write.writerows(rows)
 
-def main():
+def main():                                                 # function main.
     k = -1.5
     m = 0.2
     x = list(range(-4,5))   
@@ -52,16 +52,14 @@ def main():
     y_class_0 = [element[1] for element in p_class_0]
     x_class_1 = [element[0] for element in p_class_1]
     y_class_1 = [element[1] for element in p_class_1]
-    print(f'''\n============== Labeled data ==============\n
-        Points with class 0 - {len(p_class_0)}.\n
-        Points with class 1 - {len(p_class_1)}.\n\n''')
+ 
     plt.plot(x,y, 'r')
     plt.scatter(x_class_0, y_class_0)
     plt.scatter(x_class_1, y_class_1)
-    plt.title("Linear classification.")
+    plt.title(f"Linear classification. Function f(x)=-1.5x+0.2\n Points with class 0 - {len(p_class_0)}.\n Points with class 1 - {len(p_class_1)}.")
     plt.xlabel("x")
     plt.ylabel("y")
-    plt.legend(["y=-1.5x+0.2", "Label - 0", "Label - 1"], loc=4)
+    plt.legend(["f(x)=-1.5x+0.2", "Label - 0", "Label - 1"], loc=4)
     plt.show()
 
 if __name__=="__main__":
