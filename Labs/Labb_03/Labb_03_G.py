@@ -5,7 +5,7 @@ import csv
 @cache
 def get_data():
     with open ("./Labs/Labb_03/unlabelled_data.csv","r") as f_read:
-        data = [data.strip("\n").replace(","," ").split() for data in f_read.readlines()]
+        data = [data.strip("\n").split(',') for data in f_read.readlines()]
         data_array = [[float(item) for item in l] for l in data]
     return data_array
 
